@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Your Profession"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Professions Radio Group -->
+        <RadioGroup
+            android:id="@+id/radioGroupProfessions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doctor"/>
+
+            <RadioButton
+                android:id="@+id/radioTeacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teacher"/>
+
+            <RadioButton
+                android:id="@+id/radioLawyer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lawyer"/>
+
+            <RadioButton
+                android:id="@+id/radioEngineer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Engineer"/>
+
+            <RadioButton
+                android:id="@+id/radioPrincipal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Principal"/>
+
+            <RadioButton
+                android:id="@+id/radioStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student"/>
+        </RadioGroup>
+
+        <!-- Student sub-options -->
+        <RadioGroup
+            android:id="@+id/radioGroupStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/radioSchool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="School"/>
+
+            <RadioButton
+                android:id="@+id/radioUniversity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="University"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etParentEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Parent Email (for school student)"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+
+        <!-- Other Profession Option -->
+        <RadioButton
+            android:id="@+id/radioOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/etOtherProfession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your profession"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"/>
+
+        <!-- Continue Button -->
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</ScrollView>
